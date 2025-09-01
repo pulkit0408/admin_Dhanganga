@@ -2,23 +2,30 @@
 import React from "react";
 import StatCard from "../common/StatCard";
 import { Mail, CheckCircle, XCircle, User } from "lucide-react";
+// ✅ named import
+import { enquiries } from "../enquiry/EnquiryData";
 
 const Dashboard = () => {
   const dashboardStats = [
-    { title: "Total Enquiry", value: "94", icon: Mail, color: "bg-blue-500" },
+    {
+      title: "Total Enquiry",
+      value: enquiries.length,
+      icon: Mail,
+      color: "bg-blue-500",
+    },
     {
       title: "Successful Transaction",
-      value: "40",
+      value: 40,
       icon: CheckCircle,
       color: "bg-green-500",
     },
     {
       title: "Failed Transaction",
-      value: "136",
+      value: 136,
       icon: XCircle,
       color: "bg-red-500",
     },
-    { title: "Paid Member", value: "80", icon: User, color: "bg-yellow-500" },
+    { title: "Paid Member", value: 80, icon: User, color: "bg-yellow-500" },
   ];
 
   return (
